@@ -1,6 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Dancing+Script:wght@400;700&family=Merriweather:wght@400;700&family=Roboto:wght@400;700&family=Ubuntu:wght@300;400;700&display=swap');
+.test{
+    border: 1px solid black;
+    text-align: center;
+    border-top-left-radius: 1.1rem;
+    background-color: #991B1B;
+    color: antiquewhite;
+}
 
+body{
+    font-family: 'Cookie', cursive;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Merriweather', serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
 .container{
     display: flex;
     flex-direction: column;
     width: 50vw;
+    text-align: center;
+    margin: 0 auto;
+}
+#bill-amount,#cash-given{
+    height: 2rem;
+}
+#check-button{
+    margin-top: 2rem;
+    height: 2.6rem;
+    width: 50%;
+    margin-left: 9rem;
+    
+}
+.button3 {
+    background-color: #f44336; 
+    color: whitesmoke; 
+    border: 2px solid #f44336;
+    transition-duration: 1s;
+  }
+  
+  .button3:hover {
+    background-color: #ffff;
+    color: black;
+  }
+th,td{
+    margin-top: 4rem;
+    border: 1px solid black;
+}
+.footer{
+    margin-top: 13.3rem;
+    height: 5rem;
+    border: 1px solid black;
+    text-align: center;
+    border-top-right-radius: 1.1rem;
+    background-color: #991B1B;
+    color: antiquewhite;
+}
+.footer li {
+    margin-top: 3rem;
+    padding: 1rem;
+    list-style: none;
+    display: inline;
+}
+.footer a{
+    color: antiquewhite;
+    text-decoration: none;
+    font-size: larger;
 }

@@ -1,24 +1,27 @@
-const billAmount = document.querySelector("#bill-amount");
-const cashGiven = document.querySelector("#cash-given");
-const checkButton = document.querySelector("#check-button");
-const errorMessage = document.querySelector("#error-message"); 
-const availableNotes = [2000,500,100,20,10,5,1];
-const noOfNotes = document.querySelectorAll(".no-of-notes");
+var billAmount = document.querySelector("#bill-amount");
+var cashGiven = document.querySelector("#cash-given");
+var checkButton = document.querySelector("#check-button");
+var errorMessage = document.querySelector("#error-message"); 
+var availableNotes = [2000,500,100,20,10,5,1];
+var noOfNotes = document.querySelectorAll(".no-of-notes");
 
-checkButton.addEventListener("click", function check(){
-    hideMessage();
-    if (billAmount.value > 0){
-        if (cashGiven.value >= billAmount.value){
-           const changeAmount = cashGiven.value - billAmount.value ; 
-           calculateChange(changeAmount);
-           
-        }else{
-            showMessage("Insufficient Cash / Give more cash");
+checkButton.addEventListener("click", check)
+
+    function check(){
+        hideMessage();
+        if (Number(billAmount.value > 0)){
+            if (Number(cashGiven.value) >= Number(billAmount.value)){
+               const changeAmount = Number(cashGiven.value) - Number(billAmount.value) ; 
+               calculateChange(changeAmount);
+               
+            }else{
+                showMessage("Insufficient Cash / Give more cash");
+            }
+        }else {
+            showMessage("Invalid Bill Amount");
         }
-    }else {
-        showMessage("Invalid Bill Amount");
-    }
-});
+    };
+
 
 function calculateChange(changeAmount){
     for (var i = 0; i <availableNotes.length ; i++){
